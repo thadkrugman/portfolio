@@ -40,24 +40,22 @@ const navItems = [
             d="M4 6h16M4 12h16M12 18h8"></path>
         </svg>
       </button>
-      <div
-        class="border-primary-content text-primary-content hidden md:flex md:gap-x-6 z-10 border-b py-2 syne"
-      >
-        <a href="/" class="text-2xl font-bold hover:opacity-70">
-          Thad Krugman
-        </a>
-        <span>/</span>
-        {
-          navItems.slice(1).map((item, index) => (
-            <>
-              <a class="text-xl font-light hover:opacity-70" href={item.href}>
-                {item.name}
-              </a>
-              {index !== navItems.length - 2 && <span>/</span>}
-            </>
-          ))
-        }
-      </div>
+    </div>
+    <div
+      class="border-primary-content text-primary-content hidden md:flex md:gap-x-6 z-10 border-b py-2 syne"
+    >
+      <a href="/" class="text-2xl font-bold hover:opacity-70"> Thad Krugman </a>
+      <span>/</span>
+      {
+        navItems.slice(1).map((item, index) => (
+          <>
+            <a class="text-xl font-light hover:opacity-70" href={item.href}>
+              {item.name}
+            </a>
+            {index !== navItems.length - 2 && <span>/</span>}
+          </>
+        ))
+      }
     </div>
     <!-- Mobile menu, show/hide based on menu open state. -->
     <div
