@@ -1,4 +1,10 @@
 ---
+interface Props {
+  color: string;
+}
+
+const { color } = Astro.props;
+
 const navItems = [
   { name: "Home", href: "/" },
   { name: "About", href: "/about" },
@@ -8,14 +14,14 @@ const navItems = [
 ];
 ---
 
-<header class="bg-primary h-20 sm:h-24 md:h-28 relative overflow-hidden">
+<header class={`${"bg-" + color} h-20 sm:h-24 md:h-28 relative`}>
   <nav
     class="md:relative mx-auto flex container items-center h-full w-full justify-between md:justify-end pl-0"
     aria-label="Global"
   >
     <a
       href="/"
-      class="text-primary-accent md:absolute top-0 left-0 md:-left-[200px] z-0 text-[10vw] md:text-9xl syne font-bold md:-mt-5"
+      class="text-white/50 md:absolute top-0 left-0 md:-left-[200px] z-30 md:z-0 text-[10vw] md:text-9xl syne font-bold md:-mt-5"
     >
       Thad&nbsp;Krugman
     </a>
@@ -23,7 +29,7 @@ const navItems = [
       <button
         type="button"
         id="openDrawerBtn"
-        class="inline-flex h-8 w-8 items-center justify-center text-primary-content z-20"
+        class="inline-flex h-8 w-8 items-center justify-center text-content z-20"
       >
         <span class="sr-only">Open main menu</span>
         <svg
@@ -42,7 +48,7 @@ const navItems = [
       </button>
     </div>
     <div
-      class="border-primary-content text-primary-content hidden md:flex md:gap-x-6 z-10 border-b py-2 syne"
+      class="border-content text-content hidden md:flex md:gap-x-6 z-10 border-b py-2 syne"
     >
       <a href="/" class="text-2xl font-bold hover:opacity-70"> Thad Krugman </a>
       <span>/</span>
@@ -59,7 +65,7 @@ const navItems = [
     </div>
     <!-- Mobile menu, show/hide based on menu open state. -->
     <div
-      class="bg-black/50 md:hidden flex flex-col items-end fixed inset-y-0 right-0 w-full overflow-y-auto transform transition-opacity duration-300 ease-in-out z-10 opacity-0"
+      class="bg-black/50 md:hidden flex flex-col items-end fixed inset-y-0 right-0 w-full overflow-y-auto transform transition-opacity duration-300 ease-in-out z-10 opacity-0 overflow-x-hidden"
       role="dialog"
       aria-modal="true"
       id="drawer-bg"
@@ -69,20 +75,16 @@ const navItems = [
       id="drawer"
       role="dialog"
       aria-modal="true"
-      class="fixed inset-y-0 right-0 bg-primary w-full max-w-[328px] h-full md:hidden overflow-y-auto flex flex-col transform transition-transform duration-300 ease-in-out translate-x-full z-30 px-4 py-6"
+      class={`${"bg-" + color} fixed inset-y-0 right-0 w-full max-w-[328px] h-full md:hidden overflow-y-auto flex flex-col transform transition-transform duration-300 ease-in-out translate-x-full z-30 px-4 py-6 overflow-x-hidden`}
     >
       <span
         aria-hidden="true"
-        class="select-none fixed top-[533px] -left-[238px] text-9xl font-bold syne -rotate-90 text-primary-accent"
+        class="select-none fixed top-[533px] -left-[238px] text-9xl font-bold syne -rotate-90 text-white/50"
       >
         Thad&nbsp;Krugman
       </span>
       <div class="flex items-center justify-end z-50">
-        <button
-          type="button"
-          class="h-8 w-8 text-primary-content"
-          id="closeDrawerBtn"
-        >
+        <button type="button" class="h-8 w-8 text-content" id="closeDrawerBtn">
           <span class="sr-only">Close menu</span>
           <svg
             class="h-8 w-8 hover:opacity-70"
@@ -102,9 +104,9 @@ const navItems = [
       <div class="flex flex-col z-50">
         {
           navItems.map((item) => (
-            <div class="border-b border-b-primary-accent-dark py-4">
+            <div class="border-b border-b-accent-dark py-4">
               <a
-                class="text-4xl font-medium text-primary-content syne px-2 hover:opacity-70"
+                class="text-4xl font-medium text-content syne px-2 hover:opacity-70"
                 href={item.href}
               >
                 {item.name}

@@ -8,9 +8,10 @@ export default {
         "base-content": "#ffffff",
         "base-content-dark": "#949494",
         primary: "#3CFFD0",
-        "primary-content": "#000000",
-        "primary-accent": "#9EFFE8",
-        "primary-accent-dark": "rgba(0, 0, 0, .15)",
+        secondary: "#a78bfa",
+        accent: "#9EFFE8",
+        "accent-dark": "rgba(0, 0, 0, .15)",
+        content: "#131313",
       },
       maxWidth: {
         custom: "1100px",
