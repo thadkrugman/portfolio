@@ -1,0 +1,53 @@
+<div class="bg-primary pt-3 lg:pt-10">
+  <div class="container mx-auto">
+    <h3 class="text-sm font-semibold mb-2 text-primary-content">HOME</h3>
+    <h1
+      class="underlined-heading font-medium text-[45px] lg:text-[65px] pb-2 text-primary-content"
+    >
+      Hi, I'm Thad, a full stack software engineer.
+    </h1>
+    <p class="text-[22px] lg:text-[26px] mt-2 font-light text-primary-content">
+      I'm a software engineer with a passion for building web applications. I
+      have experience working with a variety of technologies and languages,
+      including JavaScript, React, Node.js, and Python.
+    </p>
+  </div>
+  <div class="image-background flex flex-col w-full pt-6 lg:pt-9">
+    <div class="container">
+      <div
+        class="bg-blue-300 aspect-video w-full mx-auto flex flex-col items-center justify-center text-4xl font-semibold syne text-primary-content"
+      >
+        Under Construction
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+  .image-background {
+    background: linear-gradient(to bottom, #3cffd0 50%, #131313 50%);
+  }
+
+  .underlined-heading {
+    position: relative;
+    line-height: 1.1em;
+    display: block;
+  }
+
+  .underlined-heading:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-image: linear-gradient(
+      to top,
+      rgba(0, 0, 0, 0.15) 1px,
+      transparent 1px
+    );
+    background-size: 100% 1.1em;
+    background-repeat: repeat-y;
+    z-index: 1;
+  }
+</style>

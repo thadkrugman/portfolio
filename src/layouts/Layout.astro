@@ -1,27 +1,26 @@
 ---
-import '@fontsource-variable/syne'
-import Header from '../components/Header.astro'
+import "@fontsource-variable/syne";
+import Header from "../components/common/Header.astro";
 
 interface Props {
-  title: string
-  useDarkHeader?: boolean
+  title: string;
 }
 
-const { title, useDarkHeader = false } = Astro.props
+const { title } = Astro.props;
 ---
 
 <!doctype html>
-<html lang='en'>
+<html lang="en">
   <head>
-    <meta charset='UTF-8' />
-    <meta name='description' content='Astro description' />
-    <meta name='viewport' content='width=device-width' />
-    <link rel='icon' type='image/svg+xml' href='/favicon.svg' />
-    <meta name='generator' content={Astro.generator} />
+    <meta charset="UTF-8" />
+    <meta name="description" content="Astro description" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
   </head>
-  <body class='bg-base'>
-    <Header useDarkHeader={useDarkHeader} />
+  <body class="bg-base">
+    <Header />
     <slot />
   </body>
 </html>
@@ -30,40 +29,70 @@ const { title, useDarkHeader = false } = Astro.props
   const observer = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
-        entry.target.classList.add('show')
+        entry.target.classList.add("show");
       }
-    })
-  })
+    });
+  });
 
-  const fadeInElements = document.querySelectorAll('.fade-in')
-  const rotateLeftElements = document.querySelectorAll('.rotate-left')
-  const rotateRightElements = document.querySelectorAll('.rotate-right')
+  const fadeInElements = document.querySelectorAll(".fade-in");
+  const rotateLeftElements = document.querySelectorAll(".rotate-left");
+  const rotateRightElements = document.querySelectorAll(".rotate-right");
 
   fadeInElements.forEach((element) => {
-    observer.observe(element)
-  })
+    observer.observe(element);
+  });
 
   rotateLeftElements.forEach((element) => {
-    observer.observe(element)
-  })
+    observer.observe(element);
+  });
 
   rotateRightElements.forEach((element) => {
-    observer.observe(element)
-  })
+    observer.observe(element);
+  });
 </script>
 
 <style is:global>
+  body {
+    font-family:
+      system-ui,
+      -apple-system,
+      BlinkMacSystemFont,
+      "Segoe UI",
+      Roboto,
+      Oxygen,
+      Ubuntu,
+      Cantarell,
+      "Open Sans",
+      "Helvetica Neue",
+      sans-serif;
+  }
+
   h1,
   h2,
   h3,
   h4,
   h5,
   h6 {
-    font-family: 'Syne Variable', sans-serif;
+    font-family: "Syne Variable", sans-serif;
+  }
+
+  .system {
+    font-family:
+      system-ui,
+      -apple-system,
+      BlinkMacSystemFont,
+      "Segoe UI",
+      Roboto,
+      Oxygen,
+      Ubuntu,
+      Cantarell,
+      "Open Sans",
+      "Helvetica Neue",
+      sans-serif;
   }
 
   .syne {
-    font-family: 'Syne Variable', sans-serif;
+    font-family: "Syne Variable", sans-serif;
   }
 
   .btn {
