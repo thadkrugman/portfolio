@@ -7,11 +7,9 @@ export default {
         base: "#131313",
         "base-content": "#ffffff",
         "base-content-dark": "#949494",
-        primary: "#3CFFD0",
-        secondary: "#a78bfa",
-        accent: "#9EFFE8",
+        primary: "#FF6F61",
         "accent-dark": "rgba(0, 0, 0, .15)",
-        content: "#131313",
+        content: "#000000",
       },
       maxWidth: {
         custom: "1100px",
