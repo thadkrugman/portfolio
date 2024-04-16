@@ -1,0 +1,35 @@
+---
+const navItems = [
+  { name: "Home", href: "/" },
+  { name: "About", href: "/about" },
+  { name: "Portfolio", href: "/portfolio" },
+  { name: "Blog", href: "blog" },
+  { name: "Contact", href: "/contact" },
+];
+---
+
+<footer class="bg-base-dark pt-8 pb-16 text-base-dark-content overflow-hidden">
+  <div class="container">
+    <a href="/" class="text-[10vw] md:text-7xl syne font-bold">Thad Krugman</a>
+    <div class="flex flex-col lg:flex-row justify-between w-full mt-6">
+      <nav class="text-content flex gap-x-3 sm:gap-x-6 z-10 syne">
+        {
+          navItems.map((item, index) => (
+            <>
+              <a
+                class="text-xs sm:text-base font-light hover:opacity-70"
+                href={item.href}
+              >
+                {item.name}
+              </a>
+              {index !== navItems.length - 1 && <span>/</span>}
+            </>
+          ))
+        }
+      </nav>
+      <p class="mt-6 lg:mt-0 text-xs text-base-dark-content-dark">
+        &copy; {new Date().getFullYear()} Thad Krugman. All rights reserved.
+      </p>
+    </div>
+  </div>
+</footer>
