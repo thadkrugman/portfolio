@@ -1,14 +1,17 @@
 ---
+import HeroSocials from "../common/HeroSocials.astro";
+
 interface Props {
   title: string;
   heading: string;
   text: string;
+  useSlot?: boolean;
 }
 
-const { title, heading, text } = Astro.props;
+const { title, heading, text, useSlot = false } = Astro.props;
 ---
 
-<div class="bg-blurple pt-3 pb-8 lg:pt-10 lg:pb-14">
+<div class={`${!useSlot && "pb-8 lg:pb-14"} bg-blurple pt-3 lg:pt-10`}>
   <div class="container mx-auto">
     <h3 class="text-sm font-semibold mb-2 text-accent">{title}</h3>
     <h1
@@ -19,7 +22,11 @@ const { title, heading, text } = Astro.props;
     <p class="text-[22px] lg:text-[26px] mt-2 font-light text-content">
       {text}
     </p>
+    <div class="mt-4">
+      <HeroSocials />
+    </div>
   </div>
+  {useSlot && <slot />}
 </div>
 
 <style></style>

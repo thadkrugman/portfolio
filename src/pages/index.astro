@@ -1,11 +1,32 @@
 ---
-import Hero from "../components/home/Hero.astro";
 import Layout from "../layouts/Layout.astro";
+import Hero from "../components/common/Hero.astro";
 ---
 
 <Layout title="Thad Krugman | Full Stack Software Engineer">
   <main class="flex flex-col w-full">
-    <Hero />
+    <Hero
+      title="HOME"
+      heading="Hi, I'm Thad, a full stack software engineer."
+      text={`I love building cutting-edge web and mobile apps using the latest tools
+      like Astro, Solid, Svelte and Bun. I'm also having a blast diving into
+      Rust and Zig. If you've got a cool project in mind or just want to geek
+      out about tech, feel free to reach out! Let's build something amazing
+      together.`}
+      useSlot={true}
+    >
+      <div
+        class="hero-image-split-background flex flex-col w-full pt-6 lg:pt-9"
+      >
+        <div class="container">
+          <div
+            class="bg-base-dark aspect-video w-full mx-auto flex flex-col items-center justify-center text-4xl font-semibold syne text-content"
+          >
+            <p>Under Construction</p>
+          </div>
+        </div>
+      </div>
+    </Hero>
   </main>
 </Layout>
 

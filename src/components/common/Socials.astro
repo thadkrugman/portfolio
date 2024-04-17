@@ -1,0 +1,71 @@
+---
+interface Props {
+  useAccentColor: boolean;
+}
+
+const { useAccentColor } = Astro.props;
+---
+
+<div class="flex flex-row items-end space-x-3">
+  <a
+    href="https://twitter.com/thadkrugman"
+    target="_blank"
+    rel="noopener noreferrer"
+    title="X"
+    data-description="Click here to follow me on X"
+    class={`${useAccentColor ? "text-accent" : "text-content"} bg-transparent rounded-full h-10 w-10 flex items-center justify-center hover:opacity-70 ease-in-out transition duration-200`}
+  >
+    <div class="h-6 w-6">
+      <svg
+        id="Layer_1"
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 1200.01 1226.37"
+        fill="currentColor"
+        ><path
+          d="M714.16,519.28L1160.89,0h-105.86l-387.89,450.89L357.33,0H0l468.49,681.82L0,1226.37h105.87l409.63-476.15,327.18,476.15h357.33l-485.86-707.09h.03-.02ZM569.16,687.83l-47.47-67.89L144.01,79.69h162.6l304.8,435.99,47.47,67.89,396.2,566.72h-162.6l-323.31-462.45v-.03.02Z"
+        ></path></svg
+      >
+    </div>
+  </a>
+  <a
+    href="https://github.com/thadkrugman"
+    target="_blank"
+    rel="noopener noreferrer"
+    title="GitHub"
+    data-description="Click here to checkout my GitHub"
+    class={`${useAccentColor ? "text-accent" : "text-content"} bg-transparent rounded-full h-10 w-10 flex items-center justify-center hover:opacity-70 ease-in-out transition duration-200`}
+  >
+    <div class="h-6 w-6">
+      <svg
+        id="Layer_1"
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 1713.05 1917.27"
+        fill="currentColor"
+        ><path
+          d="M1713.05,667.58c0-136.1-48.37-247.37-128.29-334.7,12.92-31.34,55.69-158.23-12.21-329.99,0,0-104.56-33.54-342.61,127.79-99.65-27.64-206.41-41.46-312.37-41.96-106.05.5-212.71,14.32-312.16,41.96C367.16-30.65,262.4,2.89,262.4,2.89c-67.7,171.76-25.04,298.55-12.12,329.89-79.81,87.33-128.49,198.6-128.49,334.7,0,477.81,291.14,584.77,568.15,616.32-35.76,31.14-68,86.12-79.22,166.74-71.11,31.85-251.57,87.03-362.84-103.65,0,0-66-119.68-191.18-128.49,0,0-121.68-1.6-8.52,75.81,0,0,81.83,38.36,138.51,182.47,0,0,73.21,222.53,420.12,147.12.5,104.15,1.71,202.4,1.71,232.14,0,25.75-14.01,54.89-49.84,60.92.07.13.14.27.2.41h718.58c-36.73-5.45-50.63-35.14-50.63-61.23,0-41.06,1.4-175.36,1.4-342.2,0-116.38-39.85-192.29-84.62-230.95,277.71-30.84,569.44-136.4,569.44-615.31h0Z"
+        ></path></svg
+      >
+    </div>
+  </a>
+  <a
+    href="https://www.linkedin.com/in/thaddeus-krugman-6b2b81225/"
+    target="_blank"
+    rel="noopener noreferrer"
+    title="Linkedin"
+    data-description="Click here to connect with me on Linkedin"
+    class={`${useAccentColor ? "text-accent" : "text-content"} bg-transparent rounded-full h-10 w-10 flex items-center justify-center hover:opacity-70 ease-in-out transition duration-200`}
+  >
+    <div class="h-6 w-6">
+      <svg
+        id="Layer_1"
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 2495 2495"
+        fill="currentColor"
+        ><path
+          class="cls-1"
+          d="M185.57,308.72v1981.87h2070.95V308.72H185.57ZM758.22,2087.98h-373.35V964.73h373.35v1123.25ZM571.65,811.43h-2.41c-125.35,0-206.31-86.28-206.31-194.09s83.46-194.09,211.22-194.09,206.31,83.87,208.72,194.09c0,107.81-81.06,194.09-211.22,194.09ZM2104.52,2087.88h-373.35v-600.8c0-151-54.01-254.01-189.08-254.01-103.21,0-164.63,69.44-191.58,136.57-9.92,23.95-12.33,57.52-12.33,91.09v627.25h-373.35s4.91-1017.84,0-1123.25h373.45v158.96c49.68-76.51,138.43-185.31,336.48-185.31,245.59,0,429.76,160.52,429.76,505.51v643.99ZM2310.63,0H184.37C82.57,0,0,80.06,0,178.76v2137.58c0,98.7,82.57,178.66,184.37,178.66h2126.26c101.8,0,184.37-79.96,184.37-178.66V178.76c0-98.7-82.57-178.76-184.37-178.76ZM571.65,811.43h-2.41c-125.35,0-206.31-86.28-206.31-194.09s83.46-194.09,211.22-194.09,206.31,83.87,208.72,194.09c0,107.81-81.06,194.09-211.22,194.09ZM758.22,964.73v1123.25h-373.35V964.73h373.35ZM2104.52,2087.88h-373.35v-600.8c0-151-54.01-254.01-189.08-254.01-103.21,0-164.63,69.44-191.58,136.57-9.92,23.95-12.33,57.52-12.33,91.09v627.25h-373.35s4.91-1017.84,0-1123.25h373.45v158.96c49.68-76.51,138.43-185.31,336.48-185.31,245.59,0,429.76,160.52,429.76,505.51v643.99Z"
+        ></path></svg
+      >
+    </div>
+  </a>
+</div>

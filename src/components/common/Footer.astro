@@ -1,4 +1,6 @@
 ---
+import Socials from "../common/Socials.astro";
+
 const navItems = [
   { name: "Home", href: "/" },
   { name: "About", href: "/about" },
@@ -10,8 +12,14 @@ const navItems = [
 
 <footer class="bg-base-dark pt-8 pb-16 text-base-dark-content overflow-hidden">
   <div class="container">
-    <a href="/" class="text-[10vw] md:text-7xl syne font-bold">Thad Krugman</a>
-    <div class="flex flex-col lg:flex-row justify-between w-full mt-6">
+    <a
+      href="/"
+      class="text-[10vw] max-md:leading-none md:text-7xl syne font-bold hover:opacity-70"
+      >Thad Krugman</a
+    >
+    <div
+      class="flex flex-col lg:flex-row lg:items-end justify-between w-full mt-6 lg:mt-4"
+    >
       <nav class="text-content flex gap-x-3 sm:gap-x-6 z-10 syne">
         {
           navItems.map((item, index) => (
@@ -27,9 +35,9 @@ const navItems = [
           ))
         }
       </nav>
-      <p class="mt-6 lg:mt-0 text-xs text-base-dark-content-dark">
-        &copy; {new Date().getFullYear()} Thad Krugman. All rights reserved.
-      </p>
+      <div class="mt-7 lg:mt-0">
+        <Socials useAccentColor={false} />
+      </div>
     </div>
   </div>
 </footer>
