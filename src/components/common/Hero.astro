@@ -5,13 +5,24 @@ interface Props {
   title: string;
   heading: string;
   text: string;
+  socials?: boolean;
   useSlot?: boolean;
+  removeBottomPadding?: boolean;
 }
 
-const { title, heading, text, useSlot = false } = Astro.props;
+const {
+  title,
+  heading,
+  text,
+  socials = true,
+  useSlot = false,
+  removeBottomPadding,
+} = Astro.props;
 ---
 
-<div class={`${!useSlot && "pb-8 lg:pb-14"} bg-blurple pt-3 lg:pt-10`}>
+<div
+  class={`${!removeBottomPadding && "pb-8 lg:pb-14"} bg-blurple pt-3 lg:pt-10`}
+>
   <div class="container mx-auto">
     <h3 class="text-sm font-semibold mb-2 text-accent">{title}</h3>
     <h1
@@ -22,9 +33,7 @@ const { title, heading, text, useSlot = false } = Astro.props;
     <p class="text-[22px] lg:text-[26px] mt-2 font-light text-content">
       {text}
     </p>
-    <div class="mt-4">
-      <HeroSocials />
-    </div>
+    {socials && <HeroSocials />}
   </div>
   {useSlot && <slot />}
 </div>
