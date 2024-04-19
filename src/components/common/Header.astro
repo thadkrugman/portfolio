@@ -10,14 +10,14 @@ const navItems = [
 ];
 ---
 
-<header class="bg-blurple h-20 sm:h-24 md:h-28 relative">
+<header class="bg-primary h-20 sm:h-24 md:h-28 relative">
   <nav
     class="md:relative mx-auto flex lg:container items-center h-full w-full justify-between md:justify-end pl-0 pr-5 lg:pr-8 max-lg:overflow-hidden"
     aria-label="Global"
   >
     <a
       href="/"
-      class="text-black/30 md:absolute top-0 left-0 md:-left-[200px] z-30 md:z-0 text-[10vw] md:text-9xl syne font-bold md:-mt-[22px]"
+      class="text-white/15 md:absolute top-0 left-0 md:-left-[200px] z-30 md:z-0 text-[10vw] md:text-9xl syne font-bold md:-mt-[22px]"
     >
       Thad&nbsp;Krugman
     </a>
@@ -71,11 +71,11 @@ const navItems = [
       id="drawer"
       role="dialog"
       aria-modal="true"
-      class="bg-blurple fixed inset-y-0 right-0 w-full max-w-[328px] h-full md:hidden overflow-y-auto flex flex-col transform transition-transform duration-300 ease-in-out translate-x-full z-30 px-4 py-6 overflow-x-hidden"
+      class="bg-primary fixed inset-y-0 right-0 w-full max-w-[328px] h-full md:hidden overflow-y-auto flex flex-col transform transition-transform duration-300 ease-in-out translate-x-full z-30 px-4 py-6 overflow-x-hidden"
     >
       <span
         aria-hidden="true"
-        class="select-none fixed top-[533px] -left-[238px] text-9xl font-bold syne -rotate-90 text-black/30"
+        class="select-none fixed top-[533px] -left-[238px] text-9xl font-bold syne -rotate-90 text-white/15"
       >
         Thad&nbsp;Krugman
       </span>
@@ -101,7 +101,7 @@ const navItems = [
         {
           navItems.map((item, index) => (
             <div
-              class={`${index !== navItems.length - 1 && "border-b border-b-transparent-dark"}  py-4`}
+              class={`${index !== navItems.length - 1 && "border-b border-b-transparent-light"}  py-4`}
             >
               <a
                 class="text-4xl font-medium text-content syne px-2 hover:opacity-70"

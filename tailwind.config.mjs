@@ -5,17 +5,13 @@ export default {
   theme: {
     extend: {
       colors: {
-        base: "#ffffff",
-        "base-content": "#000000",
-        "base-content-dark": "#636363",
-        "base-dark": "#131313",
-        "base-dark-content": "#ffffff",
-        "base-dark-content-dark": "#949494",
-        blurple: "#5200FF",
-        accent: "#3CFED0",
-        "transparent-light": "rgba(255, 255, 255, .3)",
-        "transparent-dark": "rgba(0, 0, 0, .3)",
+        "base-color": "#131313",
+        primary: "#131313",
+        accent: "#FA2099",
+        "transparent-light": "rgba(255, 255, 255, .25)",
+        "transparent-dark": "rgba(0, 0, 0, .25)",
         content: "#ffffff",
+        "content-darker": "#999999",
       },
       container: {
         center: true,

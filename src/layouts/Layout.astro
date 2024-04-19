@@ -21,7 +21,7 @@ const { title } = Astro.props;
     <title>{title}</title>
   </head>
   <body
-    class="bg-base min-h-screen flex flex-col h-full w-full justify-between"
+    class="bg-base-color min-h-screen flex flex-col h-full w-full justify-between"
   >
     <div>
       <Header />
@@ -59,17 +59,13 @@ const { title } = Astro.props;
 
 <style is:global>
   :root {
-    --base: #ffffff;
-    --base-content: #000000;
-    --base-content-dark: #636363;
-    --base-dark: #131313;
-    --base-dark-content: #ffffff;
-    --base-dark-content-dark: #949494;
-    --blurple: #5200ff;
-    --accent: #3cfed0;
-    --transparent-light: rgba(255, 255, 255, 0.3);
-    --transparent-dark: rgba(0, 0, 0, 0.3);
+    --base-color: #131313;
+    --primary: #131313;
+    --accent: #fa2099;
+    --transparent-light: rgba(255, 255, 255, 0.25);
+    --transparent-dark: rgba(0, 0, 0, 0.25);
     --content: #ffffff;
+    --content-darker: #999999;
   }
 
   body {
@@ -140,6 +136,10 @@ const { title } = Astro.props;
   }
 
   .hero-image-split-background {
-    background: linear-gradient(to bottom, var(--blurple) 50%, var(--base) 50%);
+    background: linear-gradient(
+      to bottom,
+      var(--primary) 50%,
+      var(--base-color) 50%
+    );
   }
 </style>

@@ -1,25 +1,28 @@
 ---
 interface Props {
   variant: "default" | "backdrop";
-  color: "blurple" | "accent" | "white";
+  color: "primary" | "accent" | "content" | "white";
   href: string;
 }
 
 const { variant, color, href } = Astro.props;
 
 const defaultClasses = {
-  blurple:
-    "bg-transparent border-blurple text-blurple hover:bg-blurple hover:text-white",
+  primary:
+    "bg-base-color border-primary text-primary hover:bg-primary hover:text-content",
   accent:
-    "bg-transparent border-accent text-accent hover:bg-accent hover:text-blurple",
+    "bg-base-color border-accent text-accent hover:bg-accent hover:text-content",
+  content:
+    "bg-primary border-content text-content hover:bg-content hover:text-primary",
   white:
-    "bg-transparent border-white text-white hover:bg-white hover:text-blurple",
+    "bg-base-color border-white text-white hover:bg-white hover:text-base-color",
 };
 
 const backdropClasses = {
-  blurple: "bg-white border-blurple text-blurple",
-  accent: "bg-blurple border-accent text-accent",
-  white: "bg-blurple border-white text-white",
+  primary: "bg-base-color border-primary text-primary",
+  accent: "bg-base-color border-accent text-accent",
+  content: "bg-primary border-content text-content",
+  white: "bg-base-color border-white text-white",
 };
 ---
 
@@ -28,21 +31,23 @@ const backdropClasses = {
 >
   <a
     href={href}
-    class={`${variant === "default" ? defaultClasses[color] : backdropClasses[color]} text-xs font-bold py-3.5 px-16 border flex w-fit ease-in-out duration-200 transition relative z-10`}
+    class={`${variant === "default" ? defaultClasses[color] : backdropClasses[color]} text-xs font-bold py-3 px-16 border flex w-fit ease-in-out duration-200 transition relative z-10`}
   >
     <slot />
   </a>
 </div>
 
 <style>
-  .backdrop-blurple,
+  .backdrop-primary,
   .backdrop-accent,
+  .backdrop-content,
   .backdrop-white {
     position: relative;
   }
 
-  .backdrop-blurple::before,
+  .backdrop-primary::before,
   .backdrop-accent::before,
+  .backdrop-content::before,
   .backdrop-white::before {
     content: "";
     position: absolute;
@@ -55,20 +60,25 @@ const backdropClasses = {
     z-index: 1;
   }
 
-  .backdrop-blurple::before {
-    background-color: var(--blurple);
+  .backdrop-primary::before {
+    background-color: var(--primary);
   }
 
   .backdrop-accent::before {
     background-color: var(--accent);
   }
 
+  .backdrop-content::before {
+    background-color: var(--content);
+  }
+
   .backdrop-white::before {
     background-color: #ffffff;
   }
 
-  .backdrop-blurple:hover::before,
+  .backdrop-primary:hover::before,
   .backdrop-accent:hover::before,
+  .backdrop-content:hover::before,
   .backdrop-white:hover::before {
     @apply translate-x-0.5 translate-y-0.5;
   }
