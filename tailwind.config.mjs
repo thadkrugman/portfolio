@@ -7,7 +7,7 @@ export default {
       colors: {
         "base-color": "#131313",
         primary: "#131313",
-        accent: "#FA2099",
+        accent: "#9147ff",
         "transparent-light": "rgba(255, 255, 255, .25)",
         "transparent-dark": "rgba(0, 0, 0, .25)",
         content: "#ffffff",
@@ -38,7 +38,7 @@ export default {
             maxWidth: "1164px",
           },
           "@screen xl": {
-            maxWidth: "1164",
+            maxWidth: "1164px",
           },
           "@screen 2xl": {
             maxWidth: "1164px",
