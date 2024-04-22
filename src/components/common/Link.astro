@@ -28,7 +28,7 @@ const backdropClasses = {
 >
   <a
     href={href}
-    class={`${variant === "default" ? defaultClasses[color] : backdropClasses[color]} ${forHero ? "bg-primary" : "bg-base-color"} text-xs font-bold py-3 px-16 border flex w-fit ease-in-out duration-200 transition relative z-10`}
+    class={`${variant === "default" ? defaultClasses[color] : backdropClasses[color]} ${forHero ? "bg-primary" : "bg-base-color"} text-xs font-medium tracking-widest py-3 px-16 border flex w-fit ease-in-out duration-200 transition relative z-10`}
   >
     <slot />
   </a>
