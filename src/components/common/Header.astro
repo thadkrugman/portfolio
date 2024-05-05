@@ -10,14 +10,14 @@ const navItems = [
 ];
 ---
 
-<header class="bg-primary h-20 sm:h-28 md:h-28 relative">
+<header class="bg-primary h-auto md:h-28 relative">
   <nav
-    class="md:relative mx-auto flex lg:container items-center h-full w-full justify-between md:justify-end pl-0 pr-5 lg:pr-8 max-md:overflow-hidden"
+    class="md:relative mx-auto flex lg:container items-start md:items-center h-full w-full justify-between md:justify-end pl-0 pr-5 lg:pr-8 max-md:overflow-hidden"
     aria-label="Global"
   >
     <a
       href="/"
-      class="text-transparent-light md:absolute top-0 left-0 md:-left-[200px] z-30 md:z-0 text-[12vw] md:text-9xl font-medium md:-mt-[10px]"
+      class="text-transparent-light md:absolute top-0 left-0 md:-left-[200px] z-30 md:z-0 text-[11vw] md:text-9xl font-bold -mt-[3px] md:-mt-[10px] leading-none"
     >
       Thad&nbsp;Krugman
     </a>
@@ -25,7 +25,7 @@ const navItems = [
       <button
         type="button"
         id="openDrawerBtn"
-        class="inline-flex h-8 w-8 items-center justify-center text-content z-20"
+        class="inline-flex h-8 w-8 items-center justify-center text-content z-20 mt-5"
       >
         <span class="sr-only">Open main menu</span>
         <svg
@@ -69,15 +69,15 @@ const navItems = [
       id="drawer"
       role="dialog"
       aria-modal="true"
-      class="bg-primary fixed inset-y-0 right-0 w-full max-w-[328px] h-full md:hidden overflow-y-auto flex flex-col transform transition-transform duration-300 ease-in-out translate-x-full z-30 px-4 py-6 overflow-x-hidden"
+      class="bg-primary fixed inset-y-0 right-0 w-full max-w-[328px] h-full md:hidden flex flex-col transform transition-transform duration-300 ease-in-out translate-x-full z-30 px-4 py-6 overflow-hidden"
     >
       <span
         aria-hidden="true"
-        class="select-none fixed top-[450px] -left-[150px] text-9xl font-medium -rotate-90 text-transparent-light"
+        class="select-none fixed top-[465px] -left-[160px] text-9xl font-bold -rotate-90 text-transparent-light"
       >
         Thad&nbsp;Krugman
       </span>
-      <div class="flex items-center justify-end z-50">
+      <div class="flex items-center justify-end z-50 overflow-hidden">
         <button type="button" class="h-8 w-8 text-accent" id="closeDrawerBtn">
           <span class="sr-only">Close menu</span>
           <svg
@@ -99,10 +99,10 @@ const navItems = [
         {
           navItems.map((item, index) => (
             <div
-              class={`${index !== navItems.length - 1 && "border-b border-b-transparent-light"}  py-4`}
+              class={`${index !== navItems.length - 1 && "border-b border-b-transparent-light"}  py-3`}
             >
               <a
-                class="text-4xl font-light text-content px-2 hover:opacity-70"
+                class="text-[33px] font-normal text-content px-2 hover:opacity-70"
                 href={item.href}
               >
                 {item.name}
@@ -133,6 +133,7 @@ const navItems = [
     drawerBg?.classList.add("opacity-100");
     drawerBg?.classList.remove("hidden");
     drawerBg?.classList.add("flex");
+    document.body.classList.add("overflow-hidden");
   });
 
   closeDrawerBtn?.addEventListener("click", () => {
@@ -141,10 +142,11 @@ const navItems = [
     drawerBg?.classList.add("opacity-0");
     drawerBg?.classList.remove("flex");
     drawerBg?.classList.add("hidden");
+    document.body.classList.remove("overflow-hidden");
   });
 </script>
 
-<style>
+<style is:global>
   .select-none {
     user-select: none;
     -webkit-user-select: none;

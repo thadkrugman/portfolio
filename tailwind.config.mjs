@@ -9,7 +9,7 @@ export default {
         primary: "#5200ff",
         accent: "#3cffd0",
         "transparent-light": "rgba(255, 255, 255, .25)",
-        "transparent-dark": "rgba(0, 0, 0, .25)",
+        "transparent-dark": "rgba(0, 0, 0, .20)",
         content: "#ffffff",
         "content-darker": "rgba(255, 255, 255, .70)",
         "content-dark": "#000000",
