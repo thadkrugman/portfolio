@@ -1,55 +1,55 @@
 ---
-import Socials from "../common/Socials.astro";
+import Socials from '../common/Socials.astro'
 
 const navItems = [
-  { name: "Home", href: "/" },
-  { name: "About", href: "/about" },
-  { name: "Portfolio", href: "/portfolio" },
-  { name: "Blog", href: "blog" },
-  { name: "Contact", href: "/contact" },
-];
+  { name: 'Home', href: '/' },
+  { name: 'About', href: '/about' },
+  { name: 'Portfolio', href: '/portfolio' },
+  { name: 'Blog', href: 'blog' },
+  { name: 'Contact', href: '/contact' },
+]
 ---
 
-<header class="bg-primary h-auto md:h-28 relative">
+<header class='bg-primary h-auto md:h-28 relative'>
   <nav
-    class="md:relative mx-auto flex lg:container items-start md:items-center h-full w-full justify-between md:justify-end pl-0 pr-5 lg:pr-8 max-md:overflow-hidden"
-    aria-label="Global"
+    class='md:relative mx-auto flex lg:container items-start md:items-center h-full w-full justify-between md:justify-end pl-0 pr-5 lg:pr-8 max-md:overflow-hidden'
+    aria-label='Global'
   >
     <a
-      href="/"
-      class="text-transparent-light md:absolute top-0 left-0 md:-left-[200px] z-30 md:z-0 text-[11vw] md:text-9xl font-bold -mt-[3px] md:-mt-[10px] leading-none"
+      href='/'
+      class='text-transparent-light md:absolute top-0 left-0 md:-left-[200px] z-30 md:z-0 text-[11vw] md:text-9xl font-bold -mt-[3px] md:-mt-[10px] leading-none'
     >
       Thad&nbsp;Krugman
     </a>
-    <div class="flex md:hidden">
+    <div class='flex md:hidden'>
       <button
-        type="button"
-        id="openDrawerBtn"
-        class="inline-flex h-8 w-8 items-center justify-center text-content z-20 mt-5"
+        type='button'
+        id='openDrawerBtn'
+        class='inline-flex h-8 w-8 items-center justify-center text-content z-20 mt-5'
       >
-        <span class="sr-only">Open main menu</span>
+        <span class='sr-only'>Open main menu</span>
         <svg
-          class="h-8 w-8 hover:opacity-70"
-          fill="none"
-          viewBox="0 0 24 24"
-          stroke-width="2.5"
-          stroke="currentColor"
-          aria-hidden="true"
+          class='h-8 w-8 hover:opacity-70'
+          fill='none'
+          viewBox='0 0 24 24'
+          stroke-width='2.5'
+          stroke='currentColor'
+          aria-hidden='true'
         >
           <path
-            stroke-linecap="square"
-            stroke-linejoin="miter"
-            d="M4 6h16M4 12h16M12 18h8"></path>
+            stroke-linecap='square'
+            stroke-linejoin='miter'
+            d='M4 6h16M4 12h16M12 18h8'></path>
         </svg>
       </button>
     </div>
     <div
-      class="border-content text-content hidden md:flex md:gap-x-6 z-10 border-b py-2"
+      class='border-content text-content hidden md:flex md:gap-x-6 z-10 border-b py-2'
     >
       {
         navItems.map((item, index) => (
           <>
-            <a class="text-xl font-light hover:opacity-70" href={item.href}>
+            <a class='text-xl font-light hover:opacity-70' href={item.href}>
               {item.name}
             </a>
             {index !== navItems.length - 1 && <span>/</span>}
@@ -59,50 +59,50 @@ const navItems = [
     </div>
     <!-- Mobile menu, show/hide based on menu open state. -->
     <div
-      class="bg-black/40 hidden md:hidden flex-col items-end fixed inset-y-0 right-0 w-full overflow-y-auto transform transition-opacity duration-300 ease-in-out opacity-0 overflow-x-hidden z-20"
-      role="dialog"
-      aria-modal="true"
-      id="drawer-bg"
+      class='bg-black/40 hidden md:hidden flex-col items-end fixed inset-y-0 right-0 w-full overflow-y-auto transform transition-opacity duration-300 ease-in-out opacity-0 overflow-x-hidden z-20'
+      role='dialog'
+      aria-modal='true'
+      id='drawer-bg'
     >
     </div>
     <div
-      id="drawer"
-      role="dialog"
-      aria-modal="true"
-      class="bg-primary fixed inset-y-0 right-0 w-full max-w-[328px] h-full md:hidden flex flex-col transform transition-transform duration-300 ease-in-out translate-x-full z-30 px-4 py-6 overflow-hidden"
+      id='drawer'
+      role='dialog'
+      aria-modal='true'
+      class='bg-primary fixed inset-y-0 right-0 w-full max-w-[328px] h-full md:hidden flex flex-col transform transition-transform duration-300 ease-in-out translate-x-full z-30 px-4 py-6 overflow-hidden'
     >
       <span
-        aria-hidden="true"
-        class="select-none fixed top-[465px] -left-[160px] text-9xl font-bold -rotate-90 text-transparent-light"
+        aria-hidden='true'
+        class='select-none fixed top-[465px] -left-[160px] text-9xl font-bold -rotate-90 text-transparent-light'
       >
         Thad&nbsp;Krugman
       </span>
-      <div class="flex items-center justify-end z-50 overflow-hidden">
-        <button type="button" class="h-8 w-8 text-accent" id="closeDrawerBtn">
-          <span class="sr-only">Close menu</span>
+      <div class='flex items-center justify-end z-50 overflow-hidden'>
+        <button type='button' class='h-8 w-8 text-accent' id='closeDrawerBtn'>
+          <span class='sr-only'>Close menu</span>
           <svg
-            class="h-8 w-8 hover:opacity-70"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke-width="3.5"
-            stroke="currentColor"
-            aria-hidden="true"
+            class='h-8 w-8 hover:opacity-70'
+            fill='none'
+            viewBox='0 0 24 24'
+            stroke-width='3.5'
+            stroke='currentColor'
+            aria-hidden='true'
           >
             <path
-              stroke-linecap="square"
-              stroke-linejoin="miter"
-              d="M6 18L18 6M6 6l12 12"></path>
+              stroke-linecap='square'
+              stroke-linejoin='miter'
+              d='M6 18L18 6M6 6l12 12'></path>
           </svg>
         </button>
       </div>
-      <div class="flex flex-col z-50">
+      <div class='flex flex-col z-50'>
         {
           navItems.map((item, index) => (
             <div
-              class={`${index !== navItems.length - 1 && "border-b border-b-transparent-light"}  py-3`}
+              class={`${index !== navItems.length - 1 && 'border-b border-b-transparent-light'}  py-3`}
             >
               <a
-                class="text-[33px] font-normal text-content px-2 hover:opacity-70"
+                class='text-[33px] font-normal text-content px-2 hover:opacity-70'
                 href={item.href}
               >
                 {item.name}
@@ -111,8 +111,8 @@ const navItems = [
           ))
         }
       </div>
-      <div class="mt-3 text-accent text-sm px-2">
-        <p class="pb-1 font-light text-[13px] tracking-widest">FOLLOW ME</p>
+      <div class='mt-3 text-accent text-sm px-2'>
+        <p class='pb-1 font-light text-[13px] tracking-widest'>FOLLOW ME</p>
         <Socials useAccentColor={true} />
       </div>
     </div>
@@ -120,30 +120,30 @@ const navItems = [
 </header>
 
 <script>
-  const drawer = document.getElementById("drawer") as HTMLElement;
-  const drawerBg = document.getElementById("drawer-bg") as HTMLElement;
-  const openDrawerBtn = document.getElementById("openDrawerBtn") as HTMLElement;
+  const drawer = document.getElementById('drawer') as HTMLElement
+  const drawerBg = document.getElementById('drawer-bg') as HTMLElement
+  const openDrawerBtn = document.getElementById('openDrawerBtn') as HTMLElement
   const closeDrawerBtn = document.getElementById(
-    "closeDrawerBtn",
-  ) as HTMLElement;
+    'closeDrawerBtn',
+  ) as HTMLElement
 
-  openDrawerBtn?.addEventListener("click", () => {
-    drawer?.classList.remove("translate-x-full");
-    drawerBg?.classList.remove("opacity-0");
-    drawerBg?.classList.add("opacity-100");
-    drawerBg?.classList.remove("hidden");
-    drawerBg?.classList.add("flex");
-    document.body.classList.add("overflow-hidden");
-  });
+  openDrawerBtn?.addEventListener('click', () => {
+    drawer?.classList.remove('translate-x-full')
+    drawerBg?.classList.remove('opacity-0')
+    drawerBg?.classList.add('opacity-100')
+    drawerBg?.classList.remove('hidden')
+    drawerBg?.classList.add('flex')
+    document.body.classList.add('overflow-hidden')
+  })
 
-  closeDrawerBtn?.addEventListener("click", () => {
-    drawer?.classList.add("translate-x-full");
-    drawerBg?.classList.remove("opacity-100");
-    drawerBg?.classList.add("opacity-0");
-    drawerBg?.classList.remove("flex");
-    drawerBg?.classList.add("hidden");
-    document.body.classList.remove("overflow-hidden");
-  });
+  closeDrawerBtn?.addEventListener('click', () => {
+    drawer?.classList.add('translate-x-full')
+    drawerBg?.classList.remove('opacity-100')
+    drawerBg?.classList.add('opacity-0')
+    drawerBg?.classList.remove('flex')
+    drawerBg?.classList.add('hidden')
+    document.body.classList.remove('overflow-hidden')
+  })
 </script>
 
 <style is:global>
