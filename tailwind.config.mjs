@@ -7,12 +7,12 @@ export default {
       colors: {
         'base-color': '#131313',
         'base-content': '#000000',
-        primary: '#131313',
+        primary: '#a970ff',
         accent: '#a970ff',
         'transparent-light': 'rgba(255, 255, 255, .15)',
-        'transparent-dark': 'rgba(0, 0, 0, .20)',
+        'transparent-dark': 'rgba(0, 0, 0, .3)',
         content: '#ffffff',
-        'content-darker': 'rgba(255, 255, 255, .70)',
+        'content-darker': 'rgba(255, 255, 255, .60)',
         'content-dark': '#000000',
       },
       container: {
