@@ -10,7 +10,7 @@ export default {
         primary: '#a970ff',
         accent: '#a970ff',
         'transparent-light': 'rgba(255, 255, 255, .15)',
-        'transparent-dark': 'rgba(0, 0, 0, .3)',
+        'transparent-dark': 'rgba(0, 0, 0, .25)',
         content: '#ffffff',
         'content-darker': 'rgba(255, 255, 255, .60)',
         'content-dark': '#000000',
