@@ -1,26 +1,26 @@
 /** @type {import('tailwindcss').Config} */
-const plugin = require('tailwindcss/plugin')
+const plugin = require("tailwindcss/plugin");
 export default {
-  content: ['./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}'],
+  content: ["./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}"],
   theme: {
     extend: {
       colors: {
-        'base-color': '#131313',
-        'base-content': '#000000',
-        primary: '#a970ff',
-        accent: '#a970ff',
-        'transparent-light': 'rgba(255, 255, 255, .15)',
-        'transparent-dark': 'rgba(0, 0, 0, .25)',
-        content: '#ffffff',
-        'content-darker': 'rgba(255, 255, 255, .60)',
-        'content-dark': '#000000',
+        "base-color": "#131313",
+        "base-content": "#000000",
+        primary: "#a970ff",
+        accent: "#000000",
+        "transparent-light": "rgba(255, 255, 255, .15)",
+        "transparent-dark": "rgba(0, 0, 0, .25)",
+        content: "#ffffff",
+        "content-darker": "rgba(255, 255, 255, .70)",
+        "content-dark": "#000000",
       },
       container: {
         center: true,
         padding: {
-          DEFAULT: '20px',
-          sm: '20px',
-          lg: '32px',
+          DEFAULT: "20px",
+          sm: "20px",
+          lg: "32px",
         },
       },
     },
@@ -28,25 +28,25 @@ export default {
   plugins: [
     plugin(function ({ addComponents }) {
       addComponents({
-        '.container': {
-          maxWidth: '100%',
-          '@screen sm': {
-            maxWidth: '100%',
+        ".container": {
+          maxWidth: "100%",
+          "@screen sm": {
+            maxWidth: "100%",
           },
-          '@screen md': {
-            maxWidth: '740px',
+          "@screen md": {
+            maxWidth: "740px",
           },
-          '@screen lg': {
-            maxWidth: '1164px',
+          "@screen lg": {
+            maxWidth: "1164px",
           },
-          '@screen xl': {
-            maxWidth: '1164px',
+          "@screen xl": {
+            maxWidth: "1164px",
           },
-          '@screen 2xl': {
-            maxWidth: '1164px',
+          "@screen 2xl": {
+            maxWidth: "1164px",
           },
         },
-      })
+      });
     }),
   ],
-}
+};

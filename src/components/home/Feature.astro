@@ -1,26 +1,26 @@
 ---
 interface Props {
-  heading: string
-  cta: string
-  href: string
+  heading: string;
+  cta: string;
+  href: string;
 }
 
-const { heading, cta, href } = Astro.props
+const { heading, cta, href } = Astro.props;
 ---
 
 <a
   href={href}
-  class='max-w-2xl border-b border-transparent-light pb-10 pt-8 group'
+  class="max-w-2xl border-b border-transparent-light pb-10 pt-8 group"
 >
   <h2
-    class='text-xl lg:text-2xl font-bold text-content group-hover:underline ease-in-out duration-200 underline-accent'
+    class="text-xl lg:text-2xl font-bold text-content group-hover:underline ease-in-out duration-200 underline-accent"
   >
     {heading}
   </h2>
-  <p class='text-base lg:text-[20px] font-light mt-1 text-content-darker'>
+  <p class="text-base lg:text-[20px] font-light mt-1 text-content-darker">
     <slot />
   </p>
-  <p class='text-accent text-[13px] font-light mt-2'>
+  <p class="text-primary text-[13px] font-light mt-2">
     {cta} &rarr;
   </p>
 </a>

@@ -1,13 +1,13 @@
 ---
-import HeroSocials from '../common/HeroSocials.astro'
+import HeroSocials from "../common/HeroSocials.astro";
 
 interface Props {
-  title: string
-  heading: string
-  text: string
-  socials?: boolean
-  useSlot?: boolean
-  removeBottomPadding?: boolean
+  title: string;
+  heading: string;
+  text: string;
+  socials?: boolean;
+  useSlot?: boolean;
+  removeBottomPadding?: boolean;
 }
 
 const {
@@ -17,20 +17,20 @@ const {
   socials = true,
   useSlot = false,
   removeBottomPadding,
-} = Astro.props
+} = Astro.props;
 ---
 
-<div class={`${!removeBottomPadding && 'pb-8 lg:pb-14'} bg-accent pt-10`}>
-  <div class='container mx-auto'>
-    <h3 class='text-[13px] font-medium tracking-widest mb-2 text-content-dark'>
+<div class={`${!removeBottomPadding && "pb-8 lg:pb-14"} bg-primary pt-10`}>
+  <div class="container mx-auto">
+    <h3 class="text-[13px] font-medium tracking-widest mb-2 text-content-dark">
       {title}
     </h3>
     <h1
-      class='underlined-heading font-medium text-[45px] lg:text-[65px] pb-2 text-content-dark'
+      class="underlined-heading font-medium text-[45px] lg:text-[65px] pb-2 text-content-dark"
     >
       {heading}
     </h1>
-    <p class='text-[22px] lg:text-[26px] mt-2 font-light text-content-dark'>
+    <p class="text-[22px] lg:text-[26px] mt-2 font-light text-content-dark">
       {text}
     </p>
     {socials && <HeroSocials />}
