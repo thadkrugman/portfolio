@@ -7,7 +7,7 @@ export default {
       colors: {
         "base-color": "#131313",
         "base-content": "#000000",
-        primary: "#a970ff",
+        primary: "#9F40FF",
         accent: "#000000",
         "transparent-light": "rgba(255, 255, 255, .15)",
         "transparent-dark": "rgba(0, 0, 0, .25)",
