@@ -6,12 +6,13 @@ export default {
     extend: {
       colors: {
         "base-color": "#131313",
-        "base-content": "#000000",
-        primary: "#9F40FF",
+        "base-content": "#ffffff",
+        "base-content-darker": "rgba(255, 255, 255, .70)",
+        primary: "#a970ff",
         accent: "#000000",
         "transparent-light": "rgba(255, 255, 255, .15)",
         "transparent-dark": "rgba(0, 0, 0, .25)",
-        content: "#ffffff",
+        content: "#000000",
         "content-darker": "rgba(255, 255, 255, .70)",
         "content-dark": "#000000",
       },
