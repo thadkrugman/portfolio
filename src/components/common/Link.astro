@@ -1,34 +1,34 @@
 ---
 interface Props {
-  variant: 'default' | 'backdrop'
-  color: 'primary' | 'accent' | 'white' | 'black'
-  forHero?: boolean
-  href: string
+  variant: "default" | "backdrop";
+  color: "primary" | "accent" | "white" | "content";
+  forHero?: boolean;
+  href: string;
 }
 
-const { variant, color, forHero = false, href } = Astro.props
+const { variant, color, forHero = false, href } = Astro.props;
 
 const defaultClasses = {
-  primary: 'border-primary text-primary hover:bg-primary hover:text-content',
-  accent: 'border-accent text-accent hover:bg-accent hover:text-base-color',
-  white: 'border-white text-white hover:bg-white hover:text-base-color',
-  black: 'border-black text-black hover:bg-black hover:text-primary',
-}
+  primary: "border-primary text-primary hover:bg-primary hover:text-content",
+  accent: "border-accent text-accent hover:bg-accent hover:text-base-color",
+  white: "border-white text-white hover:bg-white hover:text-base-color",
+  content: "border-black text-black hover:bg-black hover:text-primary",
+};
 
 const backdropClasses = {
-  primary: 'border-primary text-primary',
-  accent: 'border-accent text-accent',
-  white: 'border-white text-white',
-  black: 'border-black text-black',
-}
+  primary: "border-primary text-primary",
+  accent: "border-accent text-accent",
+  white: "border-white text-white",
+  content: "border-content text-content",
+};
 ---
 
 <div
-  class={`${variant === 'default' ? '' : `backdrop-${color}`}  relative inline-block w-full sm:w-auto text-center`}
+  class={`${variant === "default" ? "" : `backdrop-${color}`}  relative inline-block w-full sm:w-auto text-center`}
 >
   <a
     href={href}
-    class={`${variant === 'default' ? defaultClasses[color] : backdropClasses[color]} ${forHero ? 'bg-primary' : 'bg-base-color'} text-xs font-medium tracking-widest py-3 px-16 border flex w-full sm:w-fit ease-in-out duration-200 transition relative z-10 justify-center items-center`}
+    class={`${variant === "default" ? defaultClasses[color] : backdropClasses[color]} ${forHero ? "bg-primary" : "bg-base-color"} text-xs font-medium tracking-widest py-3 px-16 border flex w-full sm:w-fit ease-in-out duration-200 transition relative z-10 justify-center items-center`}
   >
     <slot />
   </a>
@@ -38,15 +38,15 @@ const backdropClasses = {
   .backdrop-primary,
   .backdrop-accent,
   .backdrop-white,
-  .backdrop-black {
+  .backdrop-content {
     position: relative;
   }
 
   .backdrop-primary::before,
   .backdrop-accent::before,
   .backdrop-white::before,
-  .backdrop-black::before {
-    content: '';
+  .backdrop-content::before {
+    content: "";
     position: absolute;
     top: 3px;
     left: 3px;
@@ -69,14 +69,14 @@ const backdropClasses = {
     background-color: #ffffff;
   }
 
-  .backdrop-black::before {
-    background-color: #000000;
+  .backdrop-content::before {
+    background-color: var(--content);
   }
 
   .backdrop-primary:hover::before,
   .backdrop-accent:hover::before,
   .backdrop-white:hover::before,
-  .backdrop-black:hover::before {
+  .backdrop-content:hover::before {
     @apply translate-x-0.5 translate-y-0.5;
   }
 </style>

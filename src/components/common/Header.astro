@@ -17,7 +17,7 @@ const navItems = [
   >
     <a
       href="/"
-      class="text-transparent-light md:absolute top-0 left-0 z-30 md:z-0 text-[11vw] md:text-9xl font-bold -mt-[3px] md:-mt-[10px] leading-none"
+      class="text-transparent-dark md:absolute top-0 left-0 z-30 md:z-0 text-[11vw] md:text-9xl font-bold -mt-[3px] md:-mt-[10px] leading-none"
     >
       Thad&nbsp;Krugman
     </a>
@@ -25,7 +25,7 @@ const navItems = [
       <button
         type="button"
         id="openDrawerBtn"
-        class="inline-flex h-8 w-8 items-center justify-center text-content-dark z-20 mt-5"
+        class="inline-flex h-8 w-8 items-center justify-center text-content z-20 mt-5"
       >
         <span class="sr-only">Open main menu</span>
         <svg
@@ -44,7 +44,7 @@ const navItems = [
       </button>
     </div>
     <div
-      class="border-content-dark text-content-dark hidden md:flex md:gap-x-6 z-10 border-b py-2"
+      class="border-content-dark text-content hidden md:flex md:gap-x-6 z-10 border-b py-2"
     >
       {
         navItems.map((item, index) => (
@@ -73,16 +73,12 @@ const navItems = [
     >
       <span
         aria-hidden="true"
-        class="select-none fixed top-[465px] -left-[160px] text-9xl font-bold -rotate-90 text-transparent-light"
+        class="select-none fixed top-[465px] -left-[160px] text-9xl font-bold -rotate-90 text-transparent-dark"
       >
         Thad&nbsp;Krugman
       </span>
       <div class="flex items-center justify-end z-50 overflow-hidden">
-        <button
-          type="button"
-          class="h-8 w-8 text-content-dark"
-          id="closeDrawerBtn"
-        >
+        <button type="button" class="h-8 w-8 text-content" id="closeDrawerBtn">
           <span class="sr-only">Close menu</span>
           <svg
             class="h-8 w-8 hover:opacity-70"
@@ -106,7 +102,7 @@ const navItems = [
               class={`${index !== navItems.length - 1 && "border-b border-b-transparent-dark"}  py-3`}
             >
               <a
-                class="text-[33px] font-normal text-content-dark px-2 hover:opacity-70"
+                class="text-[33px] font-normal text-content px-2 hover:opacity-70"
                 href={item.href}
               >
                 {item.name}
@@ -117,7 +113,7 @@ const navItems = [
       </div>
       <div class="mt-3 text-content-dark text-sm px-2">
         <p class="pb-1 font-light text-[13px] tracking-widest">FOLLOW ME</p>
-        <Socials color="text-content-dark" />
+        <Socials color="text-content" />
       </div>
     </div>
   </nav>

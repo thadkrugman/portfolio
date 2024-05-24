@@ -1,15 +1,15 @@
 ---
-import Layout from '../layouts/Layout.astro'
-import Hero from '../components/common/Hero.astro'
-import Link from '../components/common/Link.astro'
-import Features from '../components/home/Features.astro'
-import Testimonials from '../components/home/Testimonials.astro'
+import Layout from "../layouts/Layout.astro";
+import Hero from "../components/common/Hero.astro";
+import Link from "../components/common/Link.astro";
+import Features from "../components/home/Features.astro";
+import Testimonials from "../components/home/Testimonials.astro";
 ---
 
-<Layout title='Thad Krugman | Full Stack Software Engineer'>
-  <main class='flex flex-col w-full'>
+<Layout title="Thad Krugman | Full Stack Software Engineer">
+  <main class="flex flex-col w-full">
     <Hero
-      title='HOME'
+      title="HOME"
       heading="Hi, I'm Thad, a full stack software engineer."
       text={`I love building cutting-edge web and mobile apps using the latest tools
       like Astro, Solid, Svelte and Bun. I'm also having a blast diving into
@@ -19,16 +19,16 @@ import Testimonials from '../components/home/Testimonials.astro'
       useSlot={true}
       removeBottomPadding={false}
     >
-      <div class='container pt-8 flex flex-col sm:flex-row sm:space-x-5'>
-        <Link variant='backdrop' color='black' forHero={true} href='/contact'
+      <div class="container pt-8 flex flex-col sm:flex-row sm:space-x-5">
+        <Link variant="backdrop" color="content" forHero={true} href="/contact"
           >GET IN TOUCH</Link
         >
-        <span class='mt-5 sm:mt-0'
+        <span class="mt-5 sm:mt-0"
           ><Link
-            variant='backdrop'
-            color='black'
+            variant="backdrop"
+            color="content"
             forHero={true}
-            href='/portfolio'>VIEW PORTFOLIO</Link
+            href="/portfolio">VIEW PORTFOLIO</Link
           ></span
         >
       </div>

@@ -73,12 +73,12 @@ function classNames(...classes: string[]) {
       <figure
         class="block rounded-2xl bg-primary shadow-lg ring-1 ring-slate-900/5 sm:col-span-2 lg:col-start-2 lg:row-end-1 p-6 sm:p-10"
       >
-        <blockquote class="text-base sm:text-xl text-content-dark font-medium">
+        <blockquote class="text-base sm:text-xl text-content font-medium">
           <p>{`“${featuredTestimonial.body}”`}</p>
         </blockquote>
         <figcaption class="flex items-center gap-x-4 mt-6">
           <div class="flex-auto">
-            <div class="font-bold">
+            <div class="font-bold text-content">
               - {featuredTestimonial.author.name}
             </div>
           </div>
@@ -100,12 +100,12 @@ function classNames(...classes: string[]) {
               >
                 {column.map((testimonial) => (
                   <figure class="rounded-2xl bg-primary p-6 shadow-lg ring-1 ring-slate-900/5">
-                    <blockquote class="text-content-dark text-base font-medium">
+                    <blockquote class="text-content text-base font-medium">
                       <p>{`"${testimonial.body}"`}</p>
                     </blockquote>
                     <figcaption class="mt-6 flex items-center gap-x-4">
                       <div>
-                        <div class="font-bold text-content-dark">
+                        <div class="font-bold text-content">
                           - {testimonial.author.name}
                         </div>
                       </div>
