@@ -5,14 +5,14 @@ export default {
   theme: {
     extend: {
       colors: {
-        "base-color": "#424447",
-        "base-content": "#bfc4c4",
+        "base-color": "#2d353b",
+        "base-content": "#94a3b8",
         "base-content-darker": "rgba(255, 255, 255, .70)",
-        primary: "#bfc4c4",
-        accent: "#424447",
+        primary: "#94A3B8",
+        accent: "#94a3b8",
         "transparent-light": "rgba(255, 255, 255, .15)",
-        "transparent-dark": "rgba(70, 70, 70, .25)",
-        content: "#424447",
+        "transparent-dark": "rgba(45, 53, 59, .25)",
+        content: "#2d353b",
         "content-darker": "rgba(255, 255, 255, .70)",
         "content-dark": "#000000",
       },
